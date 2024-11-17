@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+            <button id="toggle-theme">Switch Theme</button>
+            <button id="export-tasks">Export Tasks</button>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" id="task-input" placeholder="Add a new task" />
+            <input type="date" id="task-date" />
+            <select id="task-priority">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <select id="task-category">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+            </select>
+            <button id="add-task-btn">Add Task</button>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters">
+            <select id="filter-category">
+                <option value="all">All Categories</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+            </select>
+            <select id="filter-priority">
+                <option value="all">All Priorities</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="clear-completed">Clear Completed</button>
+        </div>
+
+        <!-- Task Stats -->
+        <div class="task-stats">
+            <p id="completed-tasks">Completed: 0%</p>
+        </div>
+
+        <!-- Task List -->
+        <ul id="task-list">
+            <!-- Task items will be dynamically added here -->
+        </ul>
+    </div>
+
+    <!-- Modal for exporting tasks -->
+    <div id="export-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h3>Export Tasks</h3>
+            <textarea id="export-textarea" readonly rows="8"></textarea>
+            <button id="download-btn">Download Tasks</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
